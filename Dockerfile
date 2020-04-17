@@ -5,6 +5,5 @@ RUN mkdir /app
 WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
-RUN django-admin startproject frontend
 COPY . /app/
-CMD python frontend/manage.py runserver
+CMD python frontend/manage.py runserver 8080
