@@ -1,8 +1,17 @@
 # Little scripts I wrote to learn something
 
 ## Contents to add:
-- [ ] Python
-- [ ] Julia
-- [ ] JavaScript
-- [ ] C++ / Rust ?
+- Python
+  - [ ] Metaclasses
+  - [ ] Regex expressions
+  - [ ] Multidispatch
+  - [ ] Binary search
+- Julia
+  - [ ] Simple ML
+  - [ ] Gradient Descent
+  - [ ] Autodifferentiation
+- JavaScript
+  - [ ] Mixins
+  - [ ] Inheritance
+  - [ ] Native Async stuff
 
