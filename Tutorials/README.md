@@ -2,8 +2,8 @@
 
 ## Contents to add:
 - Python
+  - [x] Regex expressions
   - [ ] Metaclasses
-  - [ ] Regex expressions
   - [ ] Multidispatch
   - [ ] Binary search
 - Julia
