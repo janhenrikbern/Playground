@@ -5,7 +5,7 @@ from django.shortcuts import render
 def index(request):
     component = render(request, 'imgClassifier/index.html', {
         'content': [
-
+            {'name': 'example', 'opts': None}
         ]
     })
 
