@@ -4,9 +4,11 @@
 - Python
   - [x] Regex expressions
   - [ ] Metaclasses
-  - [ ] Multidispatch
+  - [ ] Queues
   - [ ] Binary search
 - Julia
+  - [ ] Multidispatch
+  - [ ] Overloading
   - [ ] Simple ML
   - [ ] Gradient Descent
   - [ ] Autodifferentiation

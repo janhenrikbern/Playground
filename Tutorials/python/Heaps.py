@@ -11,6 +11,21 @@ class SimpleBinaryHeapTree:
         self.heap = []
         self._heapCondition = heap_condition
 
+    def __len__(self):
+        return len(self.heap)
+
+    def __str__(self):
+        return f'{self.heap}'
+
+    def __iadd__(self, value):
+        '''
+        Adding a value to the heap is possible by using 
+            heap = SimpleBinaryHeapTree( heap_condition = heap_condition_fn )
+            heap += 1
+            print(heap) # prints: "[1]"
+        '''
+        self.add(value)
+        return self
       
     def _getParent(self, index):
         return (index - 1) // 2
@@ -65,10 +80,6 @@ class SimpleBinaryHeapTree:
             child_idx = self._getRightChild(index)
         return child_idx
 
-
-    def printHeap(self):
-        print(self.heap)
-
     def add(self, value):
         """
         add a value to the heap tree
@@ -78,14 +89,11 @@ class SimpleBinaryHeapTree:
         self.heap.append(value)
         self._heapifyUp()
 
-    def pop_root(self):
+    def pop(self):
         self._swap(0, -1)
         root = self.heap.pop()
         self._heapifyDown()
         return root
-    
-    def length(self):
-        return len(self.heap)
 
 
 class MinHeap(SimpleBinaryHeapTree):
@@ -112,20 +120,20 @@ if __name__ == "__main__":
     print("\n>>> CASE 1: \n  Growing Heap \n")
     for v in vals:
         minHeap.add(v)
-        maxHeap.add(v)
-        minHeap.printHeap()
-        maxHeap.printHeap()
+        maxHeap += v
+        print(minHeap)
+        print(maxHeap)
 
     print("\n>>> CASE 2:\n  Shrinking Heap \n")
     min_sorted = []
     max_sorted = []
-    minHeap.printHeap()
-    maxHeap.printHeap()
+    print(minHeap)
+    print(maxHeap)
     for v in vals:
-        min_sorted.append(minHeap.pop_root())
-        max_sorted.append(maxHeap.pop_root())
-        minHeap.printHeap()
-        maxHeap.printHeap()
+        min_sorted.append(minHeap.pop())
+        max_sorted.append(maxHeap.pop())
+        print(minHeap)
+        print(maxHeap)
 
     print(min_sorted)
     print(max_sorted)

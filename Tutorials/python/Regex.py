@@ -24,8 +24,8 @@ heap = Heap(heapCondition)
 for kv in chars.items():
     heap.add(kv)
 
-for i in range(heap.length()):
-    print(heap.pop_root())
+for i in range(len(heap)):
+    print(heap.pop())
 
 
 
